@@ -1,138 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Layout Basica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            line-height: 27px;
-            color: #000;
+        * {
             margin: 0;
             padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-top: 4%;
             background-color: #4a465b;
+            /* Restricción 6: Distancia entre líneas de los párrafos de 27px */
         }
 
-        header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
+        .contenedor {
+            width: 80%;
+            margin: 0 auto;
         }
 
-        nav {
-            background-color: #161f26;
-            padding: 10px;
+        .main {
+            width: 70%;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            line-height: 27px;
         }
 
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
+            text-align: left;
+            background-color: #fff;
         }
 
         nav ul li {
             display: inline-block;
-            margin-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* Espacio entre elementos del menú de navegación */
         }
 
         nav ul li a {
-            display: block;
-            padding: 5px 10px;
-            color: #fff;
+            padding: 5px;
             text-decoration: none;
+            padding: 10px;
+            /* Elimina el subrayado de los enlaces */
+            color: black;
+            /* Color de las letras del menú de navegación */
         }
 
         nav ul li a:hover {
-            
             background-color: #000;
             color: #fff;
         }
 
-        section {
-            padding: 20px;
-        }
-
-        article {
-            background-color: #fff;
-            padding: 20px;
-        }
-
         aside {
             background-color: #161f26;
-            color: #fff;
-            padding: 20px;
+            float: left;
+            width: 30%;
         }
 
-        aside h3 {
+        li {
+            list-style: none;
+        }
+
+        .titulo {
             color: #ff8000;
+            border-bottom: #ff8000 1px solid;
         }
 
-        aside ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .widget {
+            color: white;
+            padding: 15px;
         }
 
-        aside ul li {
-            margin-bottom: 10px;
-        }
-
-        aside ul li a {
+        .widget a {
             color: #fff;
+            /* Color de las letras del aside */
             text-decoration: none;
+            /* Elimina el subrayado de los enlaces en el aside */
         }
 
-        aside ul li a:hover {
+        .widget a:hover {
             color: #8f8f8f;
         }
 
+        section {
+            background-color: white;
+        }
+
+        .posts {
+            padding: 30px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .widget>ul>li {
+
+            border-bottom: grey 1px solid;
+        }
+
+        /*footer*/
         footer {
-            background-color: #fff;
-            padding: 20px;
+            padding: 10px;
+            color: white;
             text-align: center;
+            background-color: #000;
+            clear: both;
+            width: 70%;
+        }
+
+        @media screen {
+            
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <img src="imgPractica.png" alt="imagenChula">
+    <div class="contenedor">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
 
-        </nav>
-    </header>
+                </ul>
 
-    <section>
-        <article>
-            <h2>Título del artículo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget sagittis felis. Suspendisse blandit
-                est vitae sollicitudin egestas. Integer posuere neque eget metus mattis, quis luctus risus ultrices.
-                Fusce dapibus condimentum sollicitudin. Mauris et lectus vitae turpis laoreet fermentum. Proin lacinia
-                nisl in nunc fringilla tincidunt. Duis tristique nec nisi id commodo. Etiam vulputate felis ut ultrices
-                feugiat. Morbi efficitur sodales pretium. Nulla sed cursus dui, ac laoreet ligula. Nam at lobortis
-                sapien. Mauris sed justo in mi venenatis vulputate ut non odio.</p>
-        </article>
-    </section>
-    <aside>
-        <h3>Mi Blog</h3>
-        <ul>
-            <li><a href="#">Artículo 1</a></li>
-            <li><a href="#">Artículo 2</a></li>
-            <li><a href="#">Artículo 3</a></li>
-            <li><a href="#">Artículo 4</a></li>
-        </ul>
-    </aside>
-    <footer>
-        <p>Todos los derechos reservados &copy; 2023</p>
-    </footer>
+            </nav>
+
+        </header>
+        <section class="main">
+            <div class="imagen">
+                <img src="bg.jpg" alt="caca">
+            </div>
+            <section class="posts">
+                <article>
+                    <h2>Titulo del Articulo</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt ducimus architecto
+                        autem maxime nostrum voluptate commodi accusamus accusantium nisi? Esse in doloribus ea quidem
+                        reprehenderit? Nam harum corrupti odit? Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Eligendi fugiat dignissimos excepturi ullam! Tempora eaque molestias praesentium, at vitae
+                        aliquam quod est explicabo mollitia ullam. Harum dolore ipsum similique maxime. Lorem ipsum
+                        dolor sit, amet consectetur adipisicing elit. Labore maxime porro quos eaque quisquam autem ut
+                        quam repellendus. Animi doloremque magni possimus non ullam in ratione dicta, eos blanditiis
+                        atque!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt accusantium,
+                        alias, labore, esse deserunt atque cumque reprehenderit laudantium optio sit corrupti.</p>
+                    <br>
+                    <p>orem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt ducimus architecto autem
+                        maxime nostrum voluptate commodi accusamus accusantium nisi? Esse in doloribus ea quidem
+                        reprehenderit? Nam harum corrupti odit? Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Eligendi fugiat dignissimos excepturi ullam! Tempora eaque molestias praesentium, at vitae
+                        aliquam quod est explicabo mollitia ullam. Harum dolore ipsum similique maxime. Lorem ipsum
+                        dolor sit, amet consectetur adipisicing elit. Labore maxime porro quos eaque quisquam autem ut
+                        quam repellendus. Animi doloremque magni possimus non ullam in ratione dicta, eos blanditiis
+                        atque!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt accusantium,
+                        alias, labore, esse deserunt atque cumque reprehenderit laudantium optio sit corrupti.</p>
+                    <br>
+                    <p>orem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt ducimus architecto autem
+                        maxime nostrum voluptate commodi accusamus accusantium nisi? Esse in doloribus ea quidem
+                        reprehenderit? Nam harum corrupti odit? Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Eligendi fugiat dignissimos excepturi ullam! Tempora eaque molestias praesentium, at vitae
+                        aliquam quod est explicabo mollitia ullam. Harum dolore ipsum similique maxime. Lorem ipsum
+                        dolor sit, amet consectetur adipisicing elit. Labore maxime porro quos eaque quisquam autem ut
+                        quam repellendus. Animi doloremque magni possimus non ullam in ratione dicta, eos blanditiis
+                        atque!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt accusantium,
+                        alias, labore, esse deserunt atque cumque reprehenderit laudantium optio sit corrupti.</p>
+
+                </article>
+            </section>
+        </section>
+
+        <aside>
+            <div class="widget">
+                <h3 class="titulo">Articulos destacados</h3>
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3 class="titulo">Informaci&oacute;n</h3>
+                <p style="margin-bottom: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id odio
+                    quis dicta pariatur vitae esse
+                    quas eligendi libero expedita. Illum dignissimos hic voluptatibus aut natus quia mollitia maxime?
+                    Architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero adipisci modi incidunt
+                    consequuntur. Voluptatibus magnam numquam quidem tempora ipsum veritatis, totam, ipsa nemo fugit
+                    voluptates dignissimos dolores vero facere quam.</p>
+            </div>
+
+        </aside>
+        <footer>
+            <p>Todos los derechos reservados</p>
+        </footer>
+    </div>
 </body>
 
 </html>
